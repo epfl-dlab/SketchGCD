@@ -1,0 +1,78 @@
+{
+    "context": "",
+    "task": "",
+    "instruction": "Copy the constituency parse tree.",
+    "input_markup": "Input",
+    "output_markup": "Output",
+    "demo_separator": " ##\n",
+    "actual_data_delimiter": "\"\"\"",
+    "inference_symbol": ">>>",
+    "output_prefix": " \"\"\"",
+    "demo_pool": [
+        {
+            "input": "( NP-HLN ( NN Ad ) ( NNS Notes ) )",
+            "output": "( NP-HLN ( NN Ad ) ( NNS Notes ) )"
+        },
+        {
+            "input": "( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) )",
+            "output": "( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) )"
+        },
+        {
+            "input": "( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) )",
+            "output": "( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) )"
+        },
+        {
+            "input": "( NP ( NNP Friday ) ( NNP October ) ( CD 13 ) ( CD 1989 ) )",
+            "output": "( NP ( NNP Friday ) ( NNP October ) ( CD 13 ) ( CD 1989 ) )"
+        },
+        {
+            "input": "( S ( NP-SBJ ( DT The ) ( NNPS Arabs ) ) ( VP ( VBD had ) ( NP ( RB merely ) ( NN oil ) ) ) )",
+            "output": "( S ( NP-SBJ ( DT The ) ( NNPS Arabs ) ) ( VP ( VBD had ) ( NP ( RB merely ) ( NN oil ) ) ) )"
+        },
+        {
+            "input": "( NP-HLN ( NN Energy ) )",
+            "output": "( NP-HLN ( NN Energy ) )"
+        },
+        {
+            "input": "( S ( NP-SBJ ( DT Some ) ( NNP U.S. ) ( NNS entrepreneurs ) ) ( VP ( VBP operate ) ( PP-MNR ( IN on ) ( NP ( DT a ) ( JJR smaller ) ( NN scale ) ) ) ) )",
+            "output": "( S ( NP-SBJ ( DT Some ) ( NNP U.S. ) ( NNS entrepreneurs ) ) ( VP ( VBP operate ) ( PP-MNR ( IN on ) ( NP ( DT a ) ( JJR smaller ) ( NN scale ) ) ) ) )"
+        },
+        {
+            "input": "( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) )",
+            "output": "( NP-HLN ( NNP Knowledgeware ) ( NNP Inc. ) )"
+        },
+        {
+            "input": "( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) )",
+            "output": "( S ( CC And ) ( NP-SBJ ( PRP$ her ) ( NN husband ) ) ( ADVP-TMP ( RB sometimes ) ) ( VP ( VBZ calls ) ( S ( NP-SBJ ( PRP her ) ) ( NP-PRD ( NNP Ducky ) ) ) ) )"
+        },
+        {
+            "input": "( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) )",
+            "output": "( S ( NP-SBJ ( NN Nausea ) ) ( VP ( VBZ seems ) ( NP-PRD ( DT a ) ( JJ commonplace ) ( NN symptom ) ) ) )"
+        },
+        {
+            "input": "( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) )",
+            "output": "( NP ( NP ( NNP Swedish ) ( NNP Export ) ( NNP Credit ) ( NNP Corp ) ) ( PRN ( NP-LOC ( NNP Sweden ) ) ) )"
+        },
+        {
+            "input": "( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) )",
+            "output": "( S ( NP-SBJ ( DT The ) ( NN dollar ) ) ( VP ( VBD weakened ) ( PP ( IN against ) ( NP ( RBS most ) ( JJ other ) ( JJ major ) ( NNS currencies ) ) ) ) )"
+        }
+    ],
+    "num_demo": 3,
+    "demo_selection": "first",
+    "demos_used": [
+        {
+            "input": "( NP-HLN ( NN Ad ) ( NNS Notes ) )",
+            "output": "( NP-HLN ( NN Ad ) ( NNS Notes ) )"
+        },
+        {
+            "input": "( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) )",
+            "output": "( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) )"
+        },
+        {
+            "input": "( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) )",
+            "output": "( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) )"
+        }
+    ],
+    "compiled_prompt": "\n\nCopy the constituency parse tree.\nInput: \"\"\" ( NP-HLN ( NN Ad ) ( NNS Notes ) ) \"\"\" >>> Output: \"\"\" ( NP-HLN ( NN Ad ) ( NNS Notes ) ) \"\"\" ##\nInput: \"\"\" ( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) ) \"\"\" >>> Output: \"\"\" ( S ( NP-SBJ ( DT The ) ( NN market ) ) ( VP ( VBD crumbled ) ) ) \"\"\" ##\nInput: \"\"\" ( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) ) \"\"\" >>> Output: \"\"\" ( S ( S-TPC-1 ( NP-SBJ ( PRP I ) ) ( VP ( VBD felt ) ( ADJP-PRD ( VBN betrayed ) ) ) ) ( NP-SBJ ( PRP he ) ) ( ADVP-TMP ( RB later ) ) ( VP ( VBD said ) ) ) \"\"\""
+}

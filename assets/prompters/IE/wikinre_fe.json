@@ -1,0 +1,50 @@
+{
+    "context": "",
+    "task": "",
+    "instruction": "Extract the triples in fully-expanded format from texts below.",
+    "input_markup": "Input",
+    "output_markup": "Output",
+    "demo_separator": " ##\n",
+    "actual_data_delimiter": "\"\"\"",
+    "inference_symbol": ">>>",
+    "output_prefix": " \"\"\"",
+    "demo_pool": [
+        {
+            "input": "Born in Cologne , Daniel Baier first played for the youth team of 1860 Munich .",
+            "output": "[s] Daniel_Baier [r] place of birth [o] Cologne [e] [end]"
+        },
+        {
+            "input": "Masami Tachikawa is a Japanese basketball player who competed in the 2004 Summer Olympics .",
+            "output": "[s] Masami_Tachikawa [r] country of citizenship [o] Japan [e] [s] Masami_Tachikawa [r] participant in [o] 2004 Summer_Olympics [e] [end]"
+        },
+        {
+            "input": "County Leitrim was long influenced by the O'Rourke family of Dromahair , whose heraldic lion occupies the official county shield to this day .",
+            "output": "[s] Dromahair [r] located in the administrative territorial entity [o] County_Leitrim [e] [end]"
+        },
+        {
+            "input": "Wolves of the Rail is a 1918 American silent western film produced , directed by , and starring William S. Hart .",
+            "output": "[s] Wolves_of_the_Rail [r] cast member [o] William_S._Hart [e] [s] Wolves_of_the_Rail [r] director [o] William_S._Hart [e] [end]"
+        }
+    ],
+    "num_demo": 4,
+    "demo_selection": "first",
+    "demos_used": [
+        {
+            "input": "Born in Cologne , Daniel Baier first played for the youth team of 1860 Munich .",
+            "output": "[s] Daniel_Baier [r] place of birth [o] Cologne [e] [end]"
+        },
+        {
+            "input": "Masami Tachikawa is a Japanese basketball player who competed in the 2004 Summer Olympics .",
+            "output": "[s] Masami_Tachikawa [r] country of citizenship [o] Japan [e] [s] Masami_Tachikawa [r] participant in [o] 2004 Summer_Olympics [e] [end]"
+        },
+        {
+            "input": "County Leitrim was long influenced by the O'Rourke family of Dromahair , whose heraldic lion occupies the official county shield to this day .",
+            "output": "[s] Dromahair [r] located in the administrative territorial entity [o] County_Leitrim [e] [end]"
+        },
+        {
+            "input": "Wolves of the Rail is a 1918 American silent western film produced , directed by , and starring William S. Hart .",
+            "output": "[s] Wolves_of_the_Rail [r] cast member [o] William_S._Hart [e] [s] Wolves_of_the_Rail [r] director [o] William_S._Hart [e] [end]"
+        }
+    ],
+    "compiled_prompt": "\n\nExtract the triples in fully-expanded format from texts below.\nInput: \"\"\" Born in Cologne , Daniel Baier first played for the youth team of 1860 Munich . \"\"\" >>> Output: \"\"\" [s] Daniel Baier [r] place of birth [o] Cologne [e] [end] \"\"\" ##\nInput: \"\"\" Masami Tachikawa is a Japanese basketball player who competed in the 2004 Summer Olympics . \"\"\" >>> Output: \"\"\" [s] Masami Tachikawa [r] country of citizenship [o] Japan [e] [s] Masami Tachikawa [r] participant in [o] 2004 Summer Olympics [e] [end] \"\"\" ##\nInput: \"\"\" County Leitrim was long influenced by the O'Rourke family of Dromahair , whose heraldic lion occupies the official county shield to this day . \"\"\" >>> Output: \"\"\" [s] Dromahair [r] located in the administrative territorial entity [o] County Leitrim [e] [end] \"\"\" ##\nInput: \"\"\" Wolves of the Rail is a 1918 American silent western film produced , directed by , and starring William S. Hart . \"\"\" >>> Output: \"\"\" [s] Wolves of the Rail [r] cast member [o] William S. Hart [e] [s] Wolves of the Rail [r] director [o] William S. Hart [e] [end] \"\"\""
+}

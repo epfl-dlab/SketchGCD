@@ -1,0 +1,58 @@
+{
+    "context": "",
+    "task": "In this task, you will be provided with a draft annotations that represent information extraction in the form of triples (subject, relation, object) from a given text. Your task is to correct the annotations to make them correct.",
+    "instruction": "NO MORE THAN TWO TRIPLE PER TEXT.",
+    "input_markup": "Input",
+    "output_markup": "Output",
+    "demo_separator": " ##\n",
+    "actual_data_delimiter": "\"\"\"",
+    "inference_symbol": ">>>",
+    "output_prefix": " \"\"\"",
+    "demo_pool": [
+        {
+            "input": "[s] Kintla Glacier [r] located in the administrative territorial entity [o] Glacier National Park [e] [s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e]",
+            "output": "[s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e]"
+        },
+        {
+            "input": "[s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] located in the administrative territorial entity [o] France [e]",
+            "output": "[s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] country [o] France [e]"
+        },
+        {
+            "input": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e] [s] Gwen John [r] father [o] Edwin William John [e] [s] Gwen John [r] mother [o] Augusta [e]",
+            "output": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e]"
+        },
+        {
+            "input": "[s] Besham [r] located in the administrative territorial entity [o] Shangla District [e] [s] Besham [r] located in the administrative territorial entity [o] Khyber - Pakhtunkhwa [e] [s] Besham [r] country [o] Pakistan [e]",
+            "output": "[s] Besham [r] country [o] Pakistan [e]"
+        },
+        {
+            "input": "[s] Alex Lora [r] place of birth [o] Barcelona [e] [s] Alex Lora [r] country of birth [o] Spain [e]",
+            "output": "[s] Alex Lora Cercos [r] place of birth [o] Barcelona [e] [s] Alex Lora Cercos [r] country of citizenship [o] Spain [e]"
+        },
+        {
+            "input": "[s] Ramakrishna Badiga [r] date of birth [o] 2 September 1942 [e] [s] Ramakrishna Badiga [r] member of [o] 14th Lok Sabha [e]",
+            "output": "[s] Ramakrishna Badiga [r] country of citizenship [o] India [e]"
+        }
+    ],
+    "num_demo": 4,
+    "demo_selection": "first",
+    "demos_used": [
+        {
+            "input": "[s] Kintla Glacier [r] located in the administrative territorial entity [o] Glacier National Park [e] [s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e]",
+            "output": "[s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e]"
+        },
+        {
+            "input": "[s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] located in the administrative territorial entity [o] France [e]",
+            "output": "[s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] country [o] France [e]"
+        },
+        {
+            "input": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e] [s] Gwen John [r] father [o] Edwin William John [e] [s] Gwen John [r] mother [o] Augusta [e]",
+            "output": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e]"
+        },
+        {
+            "input": "[s] Besham [r] located in the administrative territorial entity [o] Shangla District [e] [s] Besham [r] located in the administrative territorial entity [o] Khyber - Pakhtunkhwa [e] [s] Besham [r] country [o] Pakistan [e]",
+            "output": "[s] Besham [r] country [o] Pakistan [e]"
+        }
+    ],
+    "compiled_prompt": "\nIn this task, you will be provided with a draft annotations that represent information extraction in the form of triples (subject, relation, object) from a given text. Your task is to correct the annotations to make them correct.\nNO MORE THAN TWO TRIPLE PER TEXT.\nInput: \"\"\" [s] Kintla Glacier [r] located in the administrative territorial entity [o] Glacier National Park [e] [s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e] \"\"\" >>> Output: \"\"\" [s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e] \"\"\" ##\nInput: \"\"\" [s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] located in the administrative territorial entity [o] France [e] \"\"\" >>> Output: \"\"\" [s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] country [o] France [e] \"\"\" ##\nInput: \"\"\" [s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e] [s] Gwen John [r] father [o] Edwin William John [e] [s] Gwen John [r] mother [o] Augusta [e] \"\"\" >>> Output: \"\"\" [s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e] \"\"\" ##\nInput: \"\"\" [s] Besham [r] located in the administrative territorial entity [o] Shangla District [e] [s] Besham [r] located in the administrative territorial entity [o] Khyber - Pakhtunkhwa [e] [s] Besham [r] country [o] Pakistan [e] \"\"\" >>> Output: \"\"\" [s] Besham [r] country [o] Pakistan [e] \"\"\""
+}

@@ -1,0 +1,29 @@
+root ::= tree
+
+tree ::= node end_marker
+node ::= clause | phrase | word
+
+clause ::= spaced_open_parenthesis space  clause_level_tag function_tag* index? node* spaced_close_parenthesis
+phrase ::= spaced_open_parenthesis space phrase_level_tag function_tag* index? node* spaced_close_parenthesis
+word ::= spaced_open_parenthesis space word_level_tag space actual_word spaced_close_parenthesis
+
+
+clause_level_tag ::= "S" | "SBAR" | "SBARQ" | "SINV" | "SQ"
+phrase_level_tag ::= "ADJP" | "ADVP" | "CONJP" | "FRAG" | "INTJ" | "LST" | "NAC" | "NP" | "NX" | "PP" | "PRN" | "PRT" | "QP" | "RRC" | "UCP" | "VP" | "WHADJP" | "WHAVP" | "WHNP" | "WHPP" | "X" | "WHADVP"
+word_level_tag ::= "CC" | "CD" | "DT" | "EX" | "FW" | "IN" | "JJ" | "JJR" | "JJS" | "LS" | "MD" | "NN" | "NNS" | "NNP" | "NNPS" | "PDT" | "POS" | "PRP" | "PRP$" | "RB" | "RBR" | "RBS" | "RP" | "SYM" | "TO" | "UH" | "VB" | "VBD" | "VBG" | "VBN" | "VBP" | "VBZ" | "WDT" | "WP" | "WP$" | "WRB"
+
+function_tag ::= "-ADV" | "-NOM" | "-DTV" | "-LGS" | "-PRD" | "-PUT" | "-SBJ" | "-TPC" | "-VOC" | "-BNF" | "-DIR" | "-EXT" | "-LOC" | "-MNR" | "-PRP" | "-TMP" | "-CLR" | "-CLF" | "-HLN" | "-TTL"
+
+# actual_word ::= "Some" | "securities" | "analysts" | "are" | "looking" | "for" | "no" | "better" | "than" | "break-even" | "results" | "from" |  "the" | "company" | "third" | "quarter" | "compared" | "with" | "year-earlier" | "profit" | "of" | "99.8" | "million" | "or" |                 "3.92" | "a" | "share" | "on" | "sales" | "724.4"
+
+actual_word ::= "xxx"
+
+index ::= "-" [1-9] [0-9]*
+
+spaced_open_parenthesis ::= space "("
+
+spaced_close_parenthesis ::= space ")"
+
+space ::= " "
+
+end_marker ::= space "\"\"\"" space "##"

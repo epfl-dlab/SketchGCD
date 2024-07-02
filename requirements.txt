@@ -1,0 +1,16 @@
+omegaconf # for configuration (hyperparameters)
+colorlog
+tqdm
+pandas # for data processing
+torchmetrics # for metrics
+pre-commit
+transformers>=4.41.0
+datasets # for load and save datasets(N.B. not dataset!)
+wandb # for logging
+jsonlines
+sentencepiece
+colorama
+openai
+tiktoken
+git+https://github.com/Saibo-creator/PYEVALB.git # PYEVALB adapted for SketchGCD
+git+https://github.com/epfl-dlab/transformers-CFG.git@v0.2.1-SketchGCD # Transformers-CFG

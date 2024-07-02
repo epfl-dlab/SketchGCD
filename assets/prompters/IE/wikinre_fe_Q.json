@@ -1,0 +1,68 @@
+{
+    "context": "",
+    "task": "In this task, you will be provided with a draft annotations that represent information extraction in the form of triples (subject, relation, object) from a given text. Your task is to correct the annotations to make them correct.",
+    "instruction": "",
+    "input_markup": "Input",
+    "output_markup": "Output",
+    "demo_separator": " ##\n",
+    "actual_data_delimiter": "\"\"\"",
+    "inference_symbol": ">>>",
+    "output_prefix": " \"\"\"",
+    "demo_pool": [
+        {
+            "input": "Kintla Glacier is in Glacier National Park in the U.S. state of Montana.",
+            "draft": "[s] Kintla Glacier [r] located in [o] Glacier National Park [e] [s] Kintla Glacier [r] located in [o] U.S. state of Montana [e]",
+            "output": "[s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e]"
+        },
+        {
+            "input": "Lecques is a commune in the Gard department in southern France .",
+            "draft": "[s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] located in the administrative territorial entity [o] France [e]",
+            "output": "[s] Lecques [r] located in the administrative territorial entity [o] Gard [e] [s] Lecques [r] country [o] France [e]"
+        },
+        {
+            "input": "Gwen John was born in Haverfordwest , Wales , the second of four children of Edwin William John and Gwen John wife Augusta .",
+            "draft": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] child [o] Edwin William John [e] [s] Gwen John [r] child [o] Gwen John wife Augusta [e]",
+            "output": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e]"
+        },
+        {
+            "input": "Allen Dale June , along with the other original 9 Navajo code talkers , received the Congressional Gold Medal on December 21 , 2000 .",
+            "draft": "[s] Allen Dale June [r] recipient of [o] Congressional Gold Medal [e]",
+            "output": "[s] Allen Dale June [r] award received [o] Congressional Gold Medal [e]"
+        },
+        {
+            "input": "Grosberg died on July 25 , 1970 at Mount Sinai Hospital in Miami Beach, Florida ; Joseph E. Grosberg was 86 .",
+            "draft": "[s] Grosberg [r] date of death [o] July 25, 1970 [e] [s] Grosberg [r] place of death [o] Mount Sinai Hospital [e] [s] Grosberg [r] location [o] Miami Beach, Florida [e] [s] Joseph E. Grosberg [r] age [o] 86 [e]",
+            "output": "[s] Joseph E. Grosberg [r] place of death [o] Miami Beach, Florida [e]"
+        },
+        {
+            "input": "Alexander Gauland was born in 1941 in Chemnitz , a city that became part of East Germany in 1949 and was renamed Karl - Marx - Stadt .",
+            "draft": "[s] Alexander Gauland [r] place of birth [o] Chemnitz [e] [s] Chemnitz [r] part of [o] East Germany [e] [s] Chemnitz [r] renamed [o] Karl-Marx-Stadt [e]",
+            "output": "[s] Alexander Gauland [r] place of birth [o] Chemnitz [e] [s] Alexander Gauland [r] country of citizenship [o] East Germany [e]"
+        }
+    ],
+    "num_demo": 4,
+    "demo_selection": "first",
+    "demos_used": [
+        {
+            "input": "Kintla Glacier is in Glacier National Park in the U.S. state of Montana.",
+            "draft": "[s] Kintla Glacier [r] located in [o] Glacier National Park [e] [s] Kintla Glacier [r] located in [o] U.S. state of Montana [e]",
+            "output": "[s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e]"
+        },
+        {
+            "input": "Lecques is a commune in the Gard department in southern France .",
+            "draft": "[s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] located in the administrative territorial entity [o] France [e]",
+            "output": "[s] Lecques [r] located in the administrative territorial entity [o] Gard [e] [s] Lecques [r] country [o] France [e]"
+        },
+        {
+            "input": "Gwen John was born in Haverfordwest , Wales , the second of four children of Edwin William John and Gwen John wife Augusta .",
+            "draft": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] child [o] Edwin William John [e] [s] Gwen John [r] child [o] Gwen John wife Augusta [e]",
+            "output": "[s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e]"
+        },
+        {
+            "input": "Allen Dale June , along with the other original 9 Navajo code talkers , received the Congressional Gold Medal on December 21 , 2000 .",
+            "draft": "[s] Allen Dale June [r] recipient of [o] Congressional Gold Medal [e]",
+            "output": "[s] Allen Dale June [r] award received [o] Congressional Gold Medal [e]"
+        }
+    ],
+    "compiled_prompt": "\nIn this task, you will be provided with a draft annotations that represent information extraction in the form of triples (subject, relation, object) from a given text. Your task is to correct the annotations to make them correct.\n\nInput: \"\"\" Kintla Glacier is in Glacier National Park in the U.S. state of Montana. &&& [s] Kintla Glacier [r] located in [o] Glacier National Park [e] [s] Kintla Glacier [r] located in [o] U.S. state of Montana [e] \"\"\" >>> Output: \"\"\" [s] Kintla Glacier [r] located in the administrative territorial entity [o] Montana [e] \"\"\" ##\nInput: \"\"\" Lecques is a commune in the Gard department in southern France . &&& [s] Lecques [r] located in the administrative territorial entity [o] Gard department [e] [s] Lecques [r] located in the administrative territorial entity [o] France [e] \"\"\" >>> Output: \"\"\" [s] Lecques [r] located in the administrative territorial entity [o] Gard [e] [s] Lecques [r] country [o] France [e] \"\"\" ##\nInput: \"\"\" Gwen John was born in Haverfordwest , Wales , the second of four children of Edwin William John and Gwen John wife Augusta . &&& [s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] child [o] Edwin William John [e] [s] Gwen John [r] child [o] Gwen John wife Augusta [e] \"\"\" >>> Output: \"\"\" [s] Gwen John [r] place of birth [o] Haverfordwest [e] [s] Gwen John [r] country of citizenship [o] Wales [e] \"\"\" ##\nInput: \"\"\" Allen Dale June , along with the other original 9 Navajo code talkers , received the Congressional Gold Medal on December 21 , 2000 . &&& [s] Allen Dale June [r] recipient of [o] Congressional Gold Medal [e] \"\"\" >>> Output: \"\"\" [s] Allen Dale June [r] award received [o] Congressional Gold Medal [e] \"\"\""
+}
